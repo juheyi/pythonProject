@@ -1,36 +1,36 @@
-class Mother:
-    def __init__(self, age, *args, **kwargs):
+class Display:
+    def __init__(self, pad, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.age = age
-        self.height = 168
+        self.pad = pad
+        self.permission = "10.1-11"
 
 
-class Father:
+class Battery:
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.hobby = "Play volleyball"
+        self.container = "11560мАч"
 
 
-class GrandFather:
+class RAM:
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.work = "Work in the garden"
+        self.quantity = "128ГБ"
 
 
-class GrandMother:
+class Camera:
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.cook = "Cook sup"
+        self.pixels = "8МП"
 
 
-class Child(Mother, Father, GrandFather, GrandMother):
+class Pad(Display, Battery, RAM, Camera):
     def print_info(self):
-        print(self.age)
-        print(self.hobby)
-        print(self.height)
-        print(self.work)
-        print(self.cook)
+        print(self.permission)
+        print(self.container)
+        print(self.quantity)
+        print(self.pixels)
+        print(self.pad)
 
 
-dan = Child(age="15 old")
-dan.print_info()
+pad = Pad(pad="The newest")
+pad.print_info()
